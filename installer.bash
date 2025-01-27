@@ -30,9 +30,8 @@ sudo apt upgrade -y
 # Install the chosen version and distro
 DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC sudo apt install ros-$1-$2 -y
 
-# Source ROS and put source in bashrc
-source /opt/ros/$1/setup.bash
-echo "source /opt/ros/$1/setup.bash" >> ~/.bashrc
-
 # Install colcon
 sudo apt install python3-colcon-common-extensions
+
+# Put source command in bashrc
+echo "source /opt/ros/$1/setup.bash" >> ~/.bashrc

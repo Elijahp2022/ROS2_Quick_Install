@@ -19,4 +19,6 @@ clear
 # Run the install script
 DISTRO=$(echo "$DISTRO" | tr '[:upper:]' '[:lower:]')
 VER=$(echo "$VER" | tr '[:upper:]' '[:lower:]')
-sudo bash installer.sh $DISTRO $VER
+
+sudo chmod +x installer.bash
+./installer.bash $DISTRO $VER
